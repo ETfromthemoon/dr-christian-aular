@@ -1,0 +1,58 @@
+{
+  "$system": "Augen Pro adaptado — blanco clínico, tipografía ligera, azul señal único",
+  "color": {
+    "off-black": "#0f1012",
+    "pure-black": "#020201",
+    "off-white": "#f2f2f4",
+    "pure-white": "#fdfdfd",
+    "steel-gray": "#5e5e5e",
+    "ash-gray": "#8f8f8f",
+    "signal-blue": "#0071e3",
+    "hairline": "rgba(0,0,0,0.06)",
+    "hairline-soft": "rgba(0,0,0,0.04)"
+  },
+  "surface": {
+    "canvas": "#f2f2f4",
+    "elevated": "#fdfdfd",
+    "dark": "#0f1012"
+  },
+  "typography": {
+    "family": "Inter, ui-sans-serif, system-ui, -apple-system, sans-serif",
+    "weights": { "light": 300, "book": 350, "regular": 400 },
+    "tracking": "-0.02em",
+    "line-height": 1.2,
+    "scale": {
+      "caption": { "size": "10px", "tracking": "-0.2px" },
+      "small": { "size": "13px", "tracking": "-0.26px" },
+      "body": { "size": "16px", "tracking": "-0.32px", "line-height": "1.55" },
+      "subheading": { "size": "18px", "tracking": "-0.36px" },
+      "heading": { "size": "27px", "tracking": "-0.54px" },
+      "display": { "size": "clamp(2.75rem, 1rem + 6vw, 6rem)", "tracking": "-0.03em" }
+    }
+  },
+  "radius": {
+    "hairline": "1.8px",
+    "nav-pill": "10px",
+    "button": "26px",
+    "card": "54px",
+    "container": "63px",
+    "full": "9999px"
+  },
+  "spacing": {
+    "section-gap": "clamp(4.5rem, 3rem + 6vw, 6.5rem)",
+    "card-padding": "clamp(2rem, 1rem + 4vw, 4.3rem)",
+    "element-gap": "6px",
+    "page-max-width": "1200px"
+  },
+  "border": {
+    "hairline": "0.5px solid rgba(0,0,0,0.06)",
+    "interactive": "0.5px solid #0071e3"
+  },
+  "motion": {
+    "duration-fast": "150ms",
+    "duration-normal": "300ms",
+    "duration-slow": "600ms",
+    "ease-out-expo": "cubic-bezier(0.16, 1, 0.3, 1)"
+  },
+  "elevation": "sin sombras — tono + hairline únicamente"
+}

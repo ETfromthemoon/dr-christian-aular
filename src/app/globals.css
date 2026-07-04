@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* ---- Augen Pro adaptado — Dr. Christian Aular ---- */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Colores */
+  --color-off-black: #0f1012;
+  --color-pure-black: #020201;
+  --color-off-white: #f2f2f4;
+  --color-pure-white: #fdfdfd;
+  --color-steel: #5e5e5e;
+  --color-ash: #8f8f8f;
+  --color-signal: #0071e3;
+
+  /* Radios */
+  --radius-hair: 1.8px;
+  --radius-nav: 10px;
+  --radius-btn: 26px;
+  --radius-card: 54px;
+  --radius-container: 63px;
+
+  /* Motion */
+  --ease-expo: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Aurora keyframes (Tailwind v4 los reconoce dentro de @theme) */
+  @keyframes aurora-1 {
+    0%, 100% { transform: translate3d(0%, 0%, 0) scale(1); }
+    33%      { transform: translate3d(14%, -6%, 0) scale(1.12); }
+    66%      { transform: translate3d(-6%, 12%, 0) scale(0.94); }
+  }
+  @keyframes aurora-2 {
+    0%, 100% { transform: translate3d(0%, 0%, 0) scale(1); }
+    33%      { transform: translate3d(-10%, 10%, 0) scale(0.9); }
+    66%      { transform: translate3d(8%, -8%, 0) scale(1.1); }
+  }
+  @keyframes aurora-3 {
+    0%, 100% { transform: translate3d(0%, 0%, 0) scale(1); }
+    50%      { transform: translate3d(8%, 16%, 0) scale(1.18); }
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--color-off-white);
+  color: var(--color-off-black);
+  font-family: var(--font-sans);
+  font-weight: 350;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+/* Peso 350 real (Inter variable) */
+.font-book { font-weight: 350; }
+.font-light-350 { font-weight: 300; }
+
+/* Selección con acento */
+::selection { background: rgba(0, 113, 227, 0.16); color: var(--color-off-black); }
+
+/* Aurora utilities */
+.animate-aurora-1 { animation: aurora-1 24s ease-in-out infinite; will-change: transform; }
+.animate-aurora-2 { animation: aurora-2 30s ease-in-out infinite; will-change: transform; }
+.animate-aurora-3 { animation: aurora-3 36s ease-in-out infinite; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-aurora-1, .animate-aurora-2, .animate-aurora-3 { animation: none; }
+}
+
+/* Hairline helper */
+.hairline { border: 0.5px solid rgba(0, 0, 0, 0.06); }

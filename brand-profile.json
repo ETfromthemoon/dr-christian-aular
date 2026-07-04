@@ -1,0 +1,30 @@
+{
+  "brand": {
+    "name": "Dr. Christian Aular",
+    "product": "Libérate del estrés crónico — Guía y programa médico",
+    "industry": "salud / bienestar — medicina + mindfulness",
+    "language": "es",
+    "positioning": "El médico que une ciencia rigurosa y sabiduría contemplativa para tratar el estrés crónico.",
+    "personality": ["sereno", "riguroso", "cálido", "preciso", "confiable"],
+    "voice": {
+      "do": ["hablar como médico cercano", "afirmar con evidencia", "calmar", "concreto y humano"],
+      "dont": ["vender con hype", "prometer milagros", "tono robótico/IA", "jerga espiritual vacía"]
+    },
+    "north_star": "Consultorio clínico en blanco infinito (Augen Pro adaptado)",
+    "proof_points": [
+      "+100.000 pacientes atendidos",
+      "14 años de experiencia clínica",
+      "Postítulo en Mindfulness — Universidad de Chile (con distinción)",
+      "Médico cirujano",
+      "Garantía de 30 días"
+    ],
+    "primary_action": "Comprar en Hotmart",
+    "primary_action_url": "https://pay.hotmart.com/Q104921212M",
+    "secondary_action": "Recibir muestra por correo",
+    "social": {
+      "instagram": "https://www.instagram.com/dr.aular/",
+      "facebook": "https://www.facebook.com/aularMD",
+      "email": "info@drchristaular.com"
+    }
+  }
+}
