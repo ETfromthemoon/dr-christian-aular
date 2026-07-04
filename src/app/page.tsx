@@ -10,6 +10,7 @@ import { Pricing } from "@/components/sections/Pricing";
 import { Faq } from "@/components/sections/Faq";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/sections/Footer";
+import { KineticWord } from "@/components/scroll-fx";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
         <Problem />
         <Method />
         <Benefits />
+        <div className="bg-[#f2f2f4] py-6">
+          <KineticWord text="RESPIRA · SIENTE · VIVE · RESPIRA · SIENTE · VIVE ·" />
+        </div>
         <About />
         <Testimonials />
         <Pricing />

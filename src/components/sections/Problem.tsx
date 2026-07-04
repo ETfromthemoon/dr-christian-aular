@@ -1,7 +1,8 @@
 import { Section } from "@/components/ui/section";
 import { SectionLabel } from "@/components/ui/tag";
 import { Reveal } from "@/components/motion";
-import { Moon, BrainCircuit, HeartPulse, CloudLightning } from "lucide-react";
+import { WordReveal, DotGrid } from "@/components/scroll-fx";
+import { Moon, BrainCircuit, HeartPulse, CloudLightning, ArrowUpRight } from "lucide-react";
 
 const ITEMS = [
   {
@@ -29,10 +30,11 @@ const ITEMS = [
 export function Problem() {
   return (
     <Section id="problema" tone="canvas">
+      <DotGrid opacity={0.05} />
       <div className="max-w-2xl">
         <SectionLabel>El problema</SectionLabel>
         <h2 className="mt-4 text-[clamp(1.9rem,1rem+2.6vw,3rem)] leading-[1.08] tracking-[-0.02em] font-[350]">
-          Vivir en alerta todo el día tiene un costo.
+          <WordReveal text="Vivir en alerta todo el día tiene un costo." />
         </h2>
         <p className="mt-5 text-[18px] leading-relaxed text-[#5e5e5e] font-[350]">
           El estrés sostenido no es solo sentirse cansado. Se mete en el cuerpo, en el sueño y en las decisiones.
@@ -41,8 +43,11 @@ export function Problem() {
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         {ITEMS.map((item, i) => (
           <Reveal key={item.title} delay={i * 0.08}>
-            <article className="h-full rounded-[40px] bg-[#fdfdfd] hairline p-8">
-              <item.icon strokeWidth={1.5} className="size-6 text-[#0071e3]" />
+            <article className="group card-lift h-full rounded-[40px] bg-[#fdfdfd] hairline p-8">
+              <div className="flex items-start justify-between">
+                <item.icon strokeWidth={1.5} className="size-6 text-[#0071e3]" />
+                <ArrowUpRight strokeWidth={1.5} size={18} className="arrow-slide text-[#0071e3]" />
+              </div>
               <h3 className="mt-5 text-[20px] font-[400] tracking-[-0.01em]">{item.title}</h3>
               <p className="mt-2 text-[16px] leading-relaxed text-[#5e5e5e] font-[350]">{item.body}</p>
             </article>

@@ -1,7 +1,8 @@
 import { Section } from "@/components/ui/section";
 import { SectionLabel } from "@/components/ui/tag";
 import { Reveal } from "@/components/motion";
-import { Moon, Waves, Sun, Infinity, Clock, Stethoscope } from "lucide-react";
+import { WordReveal, DotGrid } from "@/components/scroll-fx";
+import { Moon, Waves, Sun, Infinity, Clock, Stethoscope, ArrowUpRight } from "lucide-react";
 
 const BENEFITS = [
   {
@@ -39,18 +40,22 @@ const BENEFITS = [
 export function Benefits() {
   return (
     <Section id="beneficios" tone="canvas">
+      <DotGrid opacity={0.05} />
       <div className="max-w-2xl">
         <SectionLabel>Qué cambia</SectionLabel>
         <h2 className="mt-4 text-[clamp(1.9rem,1rem+2.6vw,3rem)] leading-[1.08] tracking-[-0.02em] font-[350]">
-          Lo que recuperas cuando el estrés baja.
+          <WordReveal text="Lo que recuperas cuando el estrés baja." />
         </h2>
       </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {BENEFITS.map((benefit, i) => (
           <Reveal key={benefit.title} delay={i * 0.08}>
-            <article className="h-full rounded-[40px] bg-[#fdfdfd] hairline p-8">
-              <benefit.icon strokeWidth={1.5} className="size-6 text-[#0071e3]" />
+            <article className="group card-lift h-full rounded-[40px] bg-[#fdfdfd] hairline p-8">
+              <div className="flex items-start justify-between">
+                <benefit.icon strokeWidth={1.5} className="size-6 text-[#0071e3]" />
+                <ArrowUpRight strokeWidth={1.5} size={18} className="arrow-slide text-[#0071e3]" />
+              </div>
               <h3 className="mt-5 text-[18px] md:text-[20px] font-[400] tracking-[-0.01em]">
                 {benefit.title}
               </h3>

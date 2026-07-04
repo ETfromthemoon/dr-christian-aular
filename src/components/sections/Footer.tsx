@@ -1,4 +1,6 @@
 import { SITE, NAV_LINKS } from "@/lib/site";
+import { KineticWord } from "@/components/scroll-fx";
+import { ArrowUpRight } from "lucide-react";
 
 /** Icono Instagram — SVG inline (lucide-react no lo incluye de forma estable). */
 function InstagramIcon() {
@@ -41,8 +43,12 @@ function FacebookIcon() {
 /** Footer — banda oscura con marca, contacto, redes y aviso legal. */
 export function Footer() {
   return (
-    <footer className="w-full bg-[#0f1012] px-5 py-16 text-[#fdfdfd] sm:px-8">
-      <div className="mx-auto flex w-full max-w-[1200px] flex-col gap-12">
+    <footer className="relative w-full overflow-hidden bg-[#0f1012] px-5 py-16 text-[#fdfdfd] sm:px-8">
+      <div aria-hidden className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+        <KineticWord text={SITE.name} className="text-white/[0.04]" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex w-full max-w-[1200px] flex-col gap-12">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="max-w-sm">
             <p className="text-[20px] font-[400] tracking-[-0.01em] text-[#fdfdfd]">
@@ -68,9 +74,10 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <a
               href={`mailto:${SITE.contact.email}`}
-              className="text-[15px] font-[350] text-[#0071e3] transition-colors duration-300 hover:text-[#4aa3ff]"
+              className="group inline-flex items-center gap-1.5 text-[15px] font-[350] text-[#0071e3] transition-colors duration-300 hover:text-[#4aa3ff]"
             >
               {SITE.contact.email}
+              <ArrowUpRight strokeWidth={1.5} size={14} className="arrow-slide" />
             </a>
 
             <div className="flex items-center gap-4">

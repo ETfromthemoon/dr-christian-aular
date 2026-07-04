@@ -2,6 +2,7 @@ import { Section } from "@/components/ui/section";
 import { SectionLabel } from "@/components/ui/tag";
 import { Reveal } from "@/components/motion";
 import { Accordion, type QA } from "@/components/ui/accordion";
+import { WordReveal, DotGrid } from "@/components/scroll-fx";
 
 const FAQ: QA[] = [
   {
@@ -25,11 +26,12 @@ const FAQ: QA[] = [
 export function Faq() {
   return (
     <Section id="faq" tone="elevated">
+      <DotGrid opacity={0.04} />
       <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-16">
         <div className="max-w-md">
           <SectionLabel>Preguntas frecuentes</SectionLabel>
           <h2 className="mt-4 text-[clamp(1.9rem,1rem+2.6vw,3rem)] leading-[1.08] tracking-[-0.02em] font-[350]">
-            Lo que probablemente te estás preguntando.
+            <WordReveal text="Lo que probablemente te estás preguntando." />
           </h2>
         </div>
 

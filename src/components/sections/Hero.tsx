@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import { SplitText, FadeIn, Aurora } from "@/components/motion";
+import { Parallax, DotGrid } from "@/components/scroll-fx";
 import { Tag } from "@/components/ui/tag";
 import { CTAButton } from "@/components/ui/cta-button";
 import { SITE } from "@/lib/site";
@@ -12,6 +13,7 @@ export function Hero() {
       id="top"
       className="relative flex min-h-screen w-full items-center overflow-hidden bg-[#f2f2f4] pt-32 pb-16 sm:pt-40"
     >
+      <DotGrid opacity={0.05} />
       <Aurora tone="light" />
 
       <div className="mx-auto grid w-full max-w-[1200px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
@@ -54,17 +56,19 @@ export function Hero() {
             aria-hidden
             className="absolute inset-0 -z-10 rounded-full bg-[#0071e3]/10 blur-[100px]"
           />
-          <div className="group relative mx-auto w-[70%] max-w-[340px] transition-transform duration-500 ease-[var(--ease-expo)] hover:-translate-y-1 hover:scale-[1.02] hover:rotate-[0.6deg] lg:w-full">
-            <Image
-              src="/images/book.webp"
-              alt="Programa para la liberación del estrés — libro del Dr. Christian Aular"
-              width={555}
-              height={722}
-              priority
-              sizes="(max-width: 768px) 70vw, (max-width: 1200px) 35vw, 420px"
-              className="h-auto w-full"
-            />
-          </div>
+          <Parallax speed={0.28}>
+            <div className="group relative mx-auto w-[70%] max-w-[340px] transition-transform duration-500 ease-[var(--ease-expo)] hover:-translate-y-1 hover:scale-[1.02] hover:rotate-[0.6deg] lg:w-full">
+              <Image
+                src="/images/book.webp"
+                alt="Programa para la liberación del estrés — libro del Dr. Christian Aular"
+                width={555}
+                height={722}
+                priority
+                sizes="(max-width: 768px) 70vw, (max-width: 1200px) 35vw, 420px"
+                className="h-auto w-full"
+              />
+            </div>
+          </Parallax>
         </FadeIn>
       </div>
     </section>

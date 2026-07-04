@@ -2,6 +2,7 @@ import { Section } from "@/components/ui/section";
 import { SectionLabel } from "@/components/ui/tag";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Reveal } from "@/components/motion";
+import { DotGrid, NodeNetwork, WordReveal } from "@/components/scroll-fx";
 import { SITE } from "@/lib/site";
 
 const STEPS = [
@@ -30,10 +31,19 @@ const STEPS = [
 export function Method() {
   return (
     <Section id="metodo" tone="elevated">
+      <DotGrid opacity={0.04} />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute right-0 top-1/2 hidden h-[420px] w-[320px] -translate-y-1/2 opacity-50 md:block"
+      >
+        <NodeNetwork />
+      </div>
+
       <div className="max-w-2xl">
         <SectionLabel>El método</SectionLabel>
         <h2 className="mt-4 text-[clamp(1.9rem,1rem+2.6vw,3rem)] leading-[1.08] tracking-[-0.02em] font-[350]">
-          Ciencia clínica y práctica contemplativa, en un solo camino.
+          <WordReveal text="Ciencia clínica y práctica contemplativa, en un solo camino." />
         </h2>
         <p className="mt-5 text-[18px] leading-relaxed text-[#5e5e5e] font-[350]">
           El programa trata el cuerpo, la mente, las emociones y el espíritu como un sistema
@@ -41,7 +51,7 @@ export function Method() {
         </p>
       </div>
 
-      <div className="mt-16 max-w-2xl">
+      <div className="relative mt-16 max-w-2xl">
         {STEPS.map((step, i) => (
           <Reveal key={step.number} delay={i * 0.1}>
             <div className="relative flex gap-6 pb-12 last:pb-0">
